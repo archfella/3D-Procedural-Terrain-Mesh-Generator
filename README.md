@@ -2,11 +2,6 @@
 
 3D Procedural Terrain Mesh Generator implemented in C/C++ using OpenGL graphics library incorporating ImGui for interactive user input, and STB texture-to-color buffer.
 
-## Table of Contents
-- [Features](#features)
-- [Usage](#usage)
-- [License](#license)
-
 ## Features
 - Biome selection:
   - User can choose between 5 different biome types(Alps, Rocky Mountains, Flatlands, Desert, Tundra) using the ImGui interface.
@@ -25,7 +20,7 @@
     ```bash 
    sudo pacman -S mesa
    
-## Acknowledgments
+## Acknowledgments - SEE LICENSE
 
 - This project uses [ImGui](https://github.com/ocornut/imgui), which is licensed under the MIT License, see LICENSE.
 
