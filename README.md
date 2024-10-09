@@ -43,7 +43,7 @@
 ## Images
 
 (Alps, Diffuse)
-![Alps-diffuse](./images/alps-diffuse.png)
+![Alps-diffuse](terrain_generation_project/images/alps-diffuse.png)
 
 (Alps, Cartoon - closeup)
 ![Alps-cartoon](./images/alps-cartoon.png)
