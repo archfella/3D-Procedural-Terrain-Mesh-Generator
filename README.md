@@ -46,22 +46,22 @@
 ![Alps-diffuse](terrain_generation_project/images/alps-diffuse.png)
 
 (Alps, Cartoon - closeup)
-![Alps-cartoon](./images/alps-cartoon.png)
+![Alps-cartoon](terrain_generation_project/images/alps-cartoon.png)
 
 (Rocky mountains, Diffuse)
-![Rocky-mountains-diffuse](./images/rocky-mountains-diffuse.png)
+![Rocky-mountains-diffuse](terrain_generation_project/images/rocky-mountains-diffuse.png)
 
 (Flatlands, Diffuse)
-![Flatlands-diffuse](./images/flatlands-diffuse.png)
+![Flatlands-diffuse](terrain_generation_project/images/flatlands-diffuse.png)
 
 (Desert, Diffuse)
-![Desert-diffuse](./images/desert-diffuse.png)
+![Desert-diffuse](terrain_generation_project/images/desert-diffuse.png)
 
 (Tundra, Diffuse)
-![Tundra-diffuse](./images/tundra-diffuse.png)
+![Tundra-diffuse](terrain_generation_project/images/tundra-diffuse.png)
 
 (Tundra, Cartoon-closeup)
-![Tundra-cartoon](./images/tundra-cartoon.png)
+![Tundra-cartoon](terrain_generation_project/images/tundra-cartoon.png)
 
 ## Controls:
     - Enter fly mode: 'M' -> you can now move your mouse around
