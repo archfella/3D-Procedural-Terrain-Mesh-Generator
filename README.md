@@ -62,9 +62,9 @@
     - Enter fly mode: 'M' -> you can now move your mouse around
         --> up: 'U'
         --> forward: 'W'
-        --> left: 'L'
-        --> right: 'R'
-        --> back: 'D'
+        --> left: 'A'
+        --> right: 'D'
+        --> back: 'S'
 
     - Enter user-input mode: 'N' 
         --> you can't move your mouse, but you can click on the ImGui window.
