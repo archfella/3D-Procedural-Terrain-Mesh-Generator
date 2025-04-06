@@ -1,4 +1,4 @@
-# Install script for directory: /Users/filipradovic/CLionProjects/TerrainGenerator
+# Install script for directory: /Users/filipradovic/Desktop/Clone/3D-Procedural-Terrain-Mesh-Generator
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -52,6 +52,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-  file(WRITE "/Users/filipradovic/CLionProjects/TerrainGenerator/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "/Users/filipradovic/Desktop/Clone/3D-Procedural-Terrain-Mesh-Generator/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
