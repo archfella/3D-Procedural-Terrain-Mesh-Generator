@@ -1,72 +1,108 @@
-# 3D Procedural Terrain Mesh Generator
+# Terrain Mesh Generator
+## Description
+* **Terrain Mesh Generator** implemented in C/C++ using ImGui and OpenGL libraries. Currently available on **macOS**, but can be made to work on *Linux* with minor tweaks in code.
 
-3D Procedural Terrain Mesh Generator implemented in C/C++ using OpenGL graphics library incorporating ImGui for interactive user input, and STB texture-to-color buffer.
+## Table of Contents
+
+1. [Features](#features)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [License](#license)
+5. [Sources](#sources)
 
 ## Features
-- Biome selection:
-  - User can choose between 5 different biome types(Alps, Rocky Mountains, Flatlands, Desert, Tundra) using the ImGui interface.
-- Lighting selection:
-  - User can select a lighting type using the ImGui interface. 
-  Available lighting types are: 1. classic - diffuse lighting, 2. cartoon - style lighting
-- Texture-height selection:
-  - Every texture is mapped to a certain height on the y-axis. User can change the height boundaries for different textures and alter the look of the terrain mesh.
-  
-## Dependencies - Arch Linux
-1. Install GLFW (for window creation and input handling):
-   ```bash 
-   sudo pacman -S glfw
+### Biome selection:
 
-2. Install OpenGL core libraries:
-    ```bash 
-   sudo pacman -S mesa
-   
-## Acknowledgments - SEE LICENSE
+User can choose between 5 different biome types
+
+  ![Biome Selection](images/biomeSelection.png)
+
+
+### Texture-height mapping:
+
+Every texture is mapped to a certain height on the y-axis. User can change the height boundaries for different textures and alter the look of the terrain mesh.
+
+![Biome Selection](images/heightSelection.png)
+
+
+## Installation
+
+#### Prerequisites:
+Before building the project, ensure you have the following installed:
+
+* **CMake** (version 3.10 or later)
+* A **C++ Compiler** supporting C++17
+* **GLFW**:
+
+On macOS, you can install GLFW using Homebrew:
+
+    brew install glfw
+
+* **GLEW**:
+
+Install GLEW using Homebrew:
+
+    brew install glew
+
+* **OpenGL**:
+
+macOS provides OpenGL as part of its system libraries, so no additional installation is needed.
+
+* **ImGui**:
+
+The ImGui library is included in the project under the vendor/ImGui directory, so no extra installation is needed for it.
+
+
+## Usage:
+    - Enter fly mode: 'M' -> you can now look around by moving the mouse.
+        
+        Up: 'U'
+        Forward: 'W'
+        Left: 'A'
+        Right: 'D'
+        Back: 'S'
+
+    - Enter user-input mode: 'N' 
+        
+        You can't look around  by movin your mouse, but you can click
+        on the ImGui window.
+    
+    - Exit the program: 'Esc'
+
+
+(Alps, Diffuse)
+![Alps-diffuse](images/alps-diffuse.png)
+
+(Rocky mountains, Diffuse)
+![Rocky-mountains-diffuse](images/rocky-mountains-diffuse.png)
+
+(Flatlands, Diffuse)
+![Flatlands-diffuse](images/flatlands-diffuse.png)
+
+(Desert, Diffuse)
+![Desert-diffuse](images/desert-diffuse.png)
+
+(Tundra, Diffuse)
+![Tundra-diffuse](images/tundra-diffuse.png)
+
+
+## License
 
 - This project uses [ImGui](https://github.com/ocornut/imgui), which is licensed under the MIT License, see LICENSE.
 
 - This project uses [STB](https://github.com/nothings/stb), which is licensed under the MIT License, see LICENSE.
 
-## About
+## Sources
 
-- 'h' and 'src' contain key graphics pipeline abstractions. 
-  - The Cherno's OpenGL beginner series (https://www.youtube.com/watch?v=W3gAzLwfIP0&list=PLlrATfBNZ98foTJPJ_Ev03o2oq3-GGOS2) helped me get the grasp of the basic concepts and abstractions, so my implementation is pretty similar or in some cases the same as the implementation from the tutorial series.
-  - These classes serve as the basic framework for the rest of the project.
-- 'imgui_windows' contains the ImGui window abstraction.
-- 'terrain' contains key terrain mesh-related abstractions. 
-  - I followed awesome tutorial series from OGLDev(Etay Meiri): https://www.youtube.com/watch?v=4Rbk6xRzs6g&list=PLA0dXqQjCx0S9qG5dWLsheiCJV-_eLUM0, which helped me understand different algorithms and methods described in the book from Trent Polack - Focus on 3D Terrain Programming. I tried to replicate his implementation using my framework, so some of the code implemented is altered to fit my framework API, but algorithm implementation is pretty similar, or even the same as Etay's. Here is a link to the Etay's GitHub repo: https://github.com/emeiri/ogldev.
+- **The Chernos OpenGL beginner series** 
 
-## Images
+        https://www.youtube.com/watch?v=W3gAzLwfIP0&list=PLlrATfBNZ98foTJPJ_Ev03o2oq3-GGOS2
+    helped me get the grasp of the basic concepts and abstractions. My implementation is greatly inspired by the tutorial series.
 
-(Alps, Diffuse)
-![Alps-diffuse](terrain_generation_project/images/alps-diffuse.png)
 
-(Alps, Cartoon - closeup)
-![Alps-cartoon](terrain_generation_project/images/alps-cartoon.png)
 
-(Rocky mountains, Diffuse)
-![Rocky-mountains-diffuse](terrain_generation_project/images/rocky-mountains-diffuse.png)
+- **OGLDevs(Etay Meiri) Terrain Generation series** 
+        
+        https://www.youtube.com/watch?v=4Rbk6xRzs6g&list=PLA0dXqQjCx0S9qG5dWLsheiCJV-_eLUM0)
 
-(Flatlands, Diffuse)
-![Flatlands-diffuse](terrain_generation_project/images/flatlands-diffuse.png)
-
-(Desert, Diffuse)
-![Desert-diffuse](terrain_generation_project/images/desert-diffuse.png)
-
-(Tundra, Diffuse)
-![Tundra-diffuse](terrain_generation_project/images/tundra-diffuse.png)
-
-(Tundra, Cartoon-closeup)
-![Tundra-cartoon](terrain_generation_project/images/tundra-cartoon.png)
-
-## Controls:
-    - Enter fly mode: 'M' -> you can now move your mouse around
-        --> up: 'U'
-        --> forward: 'W'
-        --> left: 'A'
-        --> right: 'D'
-        --> back: 'S'
-
-    - Enter user-input mode: 'N' 
-        --> you can't move your mouse, but you can click on the ImGui window.
-    
-    - Exit the program: 'Esc'
+    which helped me understand different algorithms and methods described in the book from **Trent Polack - Focus on 3D Terrain Programming**. I tried to replicate his implementation using my framework. Here is a link to the Etay's GitHub repo: https://github.com/emeiri/ogldev.
